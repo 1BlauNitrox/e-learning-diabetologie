@@ -300,3 +300,58 @@ Most feedback layers are generic ("Richtig", "Falsch"). Questions 8 and 9 add an
 - Clean the quirks in 4.2 and drop boilerplate.
 - Keep slide ID, layer ID and object ID with every text as provenance.
 - Resolve matching solutions through the drop-target objects on the slide.
+
+## 5. Media
+
+This section records which media exist and where they appear. Their content and how we use them are decided later.
+
+The module has **no video and no audio** (`meta.xml`: `totalvideo="0"`, `totalaudio="0"`). It has 54 images: 49 raster files in `mobile/`, 4 SVG files (stored as `story_content/*.js`) and 1 player background pattern. Every image is listed in `assetLib` and placed on a slide through `imagelib[].assetId` (see [4.2](#42-slides-layers-and-objects)); its `altText` is mostly the original file name (e.g. `hunger Foto 1.jpg`). Besides these, `story_content/` holds the module thumbnail and the icon for the handout download.
+
+### 5.1 Types
+
+| Type | Count | Contains text |
+|---|---|---|
+| Slides of a patient education course ("KetoAWARE") | 16 | Yes: headings, bullet lists, tables |
+| Screenshots of the module itself (solutions, closing slide) | 4 | Yes |
+| Photos (situations, devices, clinic) | 13 | Partly: product labels on the meter and test strip photos |
+| Chemical structural formulas | 6 | Formulas only |
+| Schematic drawings (organs, fat cells, light bulb) | 8 | No |
+| Diagram (SVG) | 1 | Not checked |
+| Text placeholders (`txt__default_*`) | 5 | No: empty frames used as drop zones and layout |
+| Player background pattern | 1 | No |
+
+### 5.2 Positions
+
+| Position | Layer | Images |
+|---|---|---|
+| Title slide | base | 3 structural formulas (ß-OHB, acetoacetate, acetone) |
+| Übersicht | base | Player background pattern (3×) |
+| Impressum | base | Portrait photo of the author |
+| Hinweise zum Lernen | base | 1 text placeholder |
+| 1.1 | base | 6 photos, one per answer option of the knowledge check |
+| 1.1 | feedback "Das sind die richtigen Antworten" | 1 screenshot of the solved knowledge check |
+| 2.1 | pop-ups Acetyl-CoA, Oxalacetat, Essigsäure? | 1 structural formula each (SVG) |
+| 2.2 | base | 2 drawings (liver, fat cells) as part of the metabolism diagram |
+| 2.3 | pop-up Nutzung | 2 drawings (muscle, brain) |
+| 3.1 | base | 1 diagram (SVG) |
+| 3.1 | pop-ups *ß-Hydroxybutyrat*, *Acetoacetat*, *Aceton* | 1 drawing (blood drop, kidney, lungs) and 1 structural formula each |
+| 3.2 | base | 2 photos (blood ketone meter, urine test strips) |
+| 5.1 | base | 1 photo (laboratory) |
+| 5.3 | base | 2 photos (intensive care) |
+| 5.4 | base | 1 drawing (light bulb) |
+| 6.1 | base | 2 course slides |
+| 6.2 | base | 4 course slides |
+| 6.3 | base | 4 course slides |
+| 6.4 | base | 5 course slides |
+| 6.5 | base | 1 course slide |
+| Quiz question 5 | solution layer | 1 screenshot of the solution |
+| Quiz question 9 | base | 2 drawings (liver, fat cells; reused from 2.2) and 4 text placeholders as drop zones |
+| Quiz question 9 | layer "Hier gehts zur richtigen Antwort" | 1 screenshot of the solution |
+| Abschluss | base | 1 photo (laptop) and 1 screenshot of topic 2.2 |
+
+### 5.3 Findings
+
+- **Chapter 6 exists mainly as images.** Its 16 course slides carry the actual content of the patient education chapter. The slide text only holds the headings and agenda items (see [3.1](#31-outline)). Without the images, chapter 6 is almost empty.
+- **Some content depends on images.** The metabolism diagram in 2.2 and quiz question 9 combine drawings with text boxes. The solutions of the knowledge check and of quiz questions 5 and 9 are shown as screenshots; the same solutions are also defined as data in `data.js` (see [4.4](#44-questions)).
+- **Images are reused.** The structural formulas appear on the title slide and in 3.1, and the liver and fat cell drawings appear in 2.2 and quiz question 9.
+- **The photos illustrate** and do not add information, apart from the product labels in 3.2.
