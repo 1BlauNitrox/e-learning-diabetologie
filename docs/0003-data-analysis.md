@@ -110,7 +110,7 @@ Slide titles in `data.js` are not used as names, because many are generic or rep
 | 6.4 | Ketoazidose behandeln | – | `5h1vmZbo2CA` |
 | 6.5 | Der persönliche Plan | – | `5ybdvscaQS3` |
 
-Chapters 1–5 explain medical content. Chapter 6 differs: it outlines a patient education course as agenda items (e.g. "Übersäuerung des Blutes", "Insulin spritzen") without explaining them.
+Chapters 1–5 explain medical content in text. Chapter 6 differs: it presents a patient education course. Its slide text holds only agenda items (e.g. "Übersäuerung des Blutes", "Insulin spritzen"), while the explanations are in 16 images of the course slides (see [5.3](#53-findings)).
 
 Outside the hierarchy, the module has:
 
