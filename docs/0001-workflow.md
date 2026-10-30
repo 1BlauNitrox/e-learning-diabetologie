@@ -27,13 +27,21 @@ All work is tracked as issues on the repository's GitHub Project board.
 | `Nice to Have` | Improves the result but is not required |
 | `Deferred` | Consciously postponed and kept for later or for future contributors |
 
-| Label | Use for |
-|---|---|
-| `documentation` | Docs, README, templates, `AGENTS.md` |
-| `planning` | Scoping, design and decisions |
-| `data` | Data analysis, extraction and processing |
-| `bug` | Something does not work as intended |
-| `enhancement` | New functionality |
+Each issue gets one or more **type** labels and one or more **area** labels. `needs-supervisor` is added only while an issue is blocked.
+
+| Label | Kind | Use for |
+|---|---|---|
+| `documentation` | Type | Docs, README, templates, `AGENTS.md` |
+| `planning` | Type | Scoping, design and decisions |
+| `enhancement` | Type | New functionality |
+| `bug` | Type | Something does not work as intended |
+| `data` | Area | Source data, its analysis and the document model |
+| `pipeline` | Area | Adapters, pipeline stages, storage, caching, CLI |
+| `knowledge-graph` | Area | Schema, normalization, graph database, graph queries |
+| `llm` | Area | LLM calls, prompts, crewAI agents |
+| `evaluation` | Area | Gold set, metrics, quality checks |
+| `infrastructure` | Area | CI, dependencies, configuration, repository setup |
+| `needs-supervisor` | Blocker | Cannot continue without our supervisor's input |
 
 Labels are added as needed. Whenever a label is added, update this table.
 
@@ -46,7 +54,16 @@ Every issue follows the issue template in [`.github/ISSUE_TEMPLATE/task.md`](../
 - **Outcome**: the concrete deliverables (files, features, decisions)
 - **Acceptance criteria**: a checklist that a reviewer can verify
 
-An issue is one reviewable unit of work. Split it if it would produce a PR too large to review in one sitting. An issue moves from `Backlog` to `Ready` only when it meets the Definition of Ready in the issue template.
+An issue is one reviewable unit of work. Split it if it would produce a PR too large to review in one sitting.
+
+### Definition of Ready
+
+An issue may move from `Backlog` to `Ready` only when:
+
+- its purpose, description and outcome are clear to both team members
+- its acceptance criteria are concrete and verifiable
+- its dependencies and blockers (other issues, data access, supervisor input) are resolved
+- its labels and priority are set
 
 ## Development cycle
 
