@@ -50,7 +50,7 @@ We received one module of the website *Diabetologie online lernen*: **Ketonkörp
 | 10 | "Folie ohne Titel" | 1 |
 | 11 | "Hungerketose" | 1 |
 
-How scenes 10 and 11 are reached, and how the menu chapters map to the scenes, is described in [Content structure](#3-content-structure).
+The detailed outline of chapters, topics and pop-ups is in [Content structure](#3-content-structure).
 
 ## 2. Source selection
 
@@ -68,119 +68,140 @@ How scenes 10 and 11 are reached, and how the menu chapters map to the scenes, i
 
 ## 3. Content structure
 
-The module connects its content in two ways: through **navigation** (which slide leads to which) and through **meaning** (which objectives, concepts and questions refer to which content). The export only encodes the first. The second is derived here by reading the texts and will have to be modelled by us.
+The content is organised in a fixed hierarchy (3.1, 3.2), which the export encodes. On top of it, learning objectives, recurring concepts, references and questions link content across chapters (3.3–3.6). The export does not encode these links; they were derived by reading the texts.
 
-### 3.1 Navigation
+### 3.1 Outline
 
-The module is built as a hub. The *Übersicht* slide links to the start slide of every chapter, and every chapter returns to it at the end.
+The content has four levels:
 
-```
-Title → Learning objectives → Übersicht (hub)
-                                ├─ Ch. 1  Wann treten Ketonkörper auf?                      (scene 3)
-                                ├─ Ch. 2  Wie entstehen Ketonkörper?                        (scene 4)
-                                ├─ Ch. 3  Was wird wie und wann sollte gemessen werden?     (scene 5)
-                                ├─ Ch. 4  Beurteilung der erhobenen Werte                   (scene 6)
-                                ├─ Ch. 5  Maßnahmen                                         (scene 7)
-                                ├─ Ch. 6  Patientenschulung zum Thema                       (scene 8)
-                                ├─ Quiz                                                     (scene 9)
-                                └─ Abschluss                                                (scene 10)
-```
+| Level | Source in the export | Count |
+|---|---|---|
+| Module | The whole export | 1 |
+| Chapter | Scene; name from the navigation menu | 6 |
+| Topic | Content slide; name from the tab on the chapter's *Kapitelstart* slide, otherwise from the slide heading | 18 |
+| Pop-up | Slide layer shown by a button; name from the button text, otherwise from the layer content (in *italics*) | 29 |
 
-| Chapter | Slides | Sub-topics | Content pop-ups |
+Slide titles in `data.js` are not used as names, because many are generic or repeated (e.g. "Kapitelstart" 7×).
+
+| No. | Chapter / topic | Pop-ups | Slide |
 |---|---|---|---|
-| Ch. 1 | 3 | Knowledge check, explanation of the situations | 5 |
-| Ch. 2 | 4 | Beteiligte, Entstehung, was passiert mit ihnen | 8 |
-| Ch. 3 | 4 | Verschiedene Ketonkörper, Nachweisorte, wann messen | 8 |
-| Ch. 4 | 2 | Bewertung der Messung | 2 |
-| Ch. 5 | 5 | Weitere Diagnostik, Hungerketose, diabetische Ketoazidose, SGLT2-Inhibitoren | 6 |
-| Ch. 6 | 6 | Kursübersicht, Ketoazidose verstehen, Risikofaktoren und erkennen, behandeln, persönlicher Plan | 0 |
+| **1** | **Wann treten Ketonkörper auf?** | | |
+| 1.1 | Wann treten Ketonkörper auf? (knowledge check) | – | `5ovCLr88si4` |
+| 1.2 | Was haben alle dargestellten richtigen Antworten gemeinsam? | 5 numbered buttons on a graphic: *Hungerzustand*, *Schwangerschaft*, *schwere Erkrankung bei Typ-1-Diabetes*, *Insulinmangel*, *SGLT2-Inhibitor* | `6HFIfXmkdKL` |
+| **2** | **Wie entstehen Ketonkörper?** | | |
+| 2.1 | Die Beteiligten am Prozess | Acetyl-CoA, Oxalacetat, Essigsäure? | `64OtgD2lzP2` |
+| 2.2 | Entstehung von Ketonkörpern | Lipidstoffwechsel unter Normalbedingungen, Lipidstoffwechsel bei „Glukosemangel“ | `6oCsLqeGpqD` |
+| 2.3 | Ketonkörper – was passiert damit? | Nutzung, Ausscheidung, Abbau | `6r0GXjwKtoG` |
+| **3** | **Was wird wie und wann sollte gemessen werden?** | | |
+| 3.1 | Verschiedene Ketonkörper | Buttons on a graphic: *ß-Hydroxybutyrat*, *Acetoacetat*, *Aceton*; Was soll gemessen werden? | `6eJKu1hLqGg` |
+| 3.2 | Verschiedene Nachweisorte (Acetoacetat oder ß-OHB?) | *Störmöglichkeiten bei der Messung von Acetoacetat* | `6WUflbGCQE6` |
+| 3.3 | Wann sollten Ketone gemessen werden? | Schwangerschaft, Typ1-Diabetes, Typ2-Diabetes | `6jJoqfZlha1` |
+| **4** | **Beurteilung der erhobenen Werte** | | |
+| 4.1 | Bewertung der Ketonkörpermessung | *Acetoacetat (Urin)*, *ß-Hydroxybutyrat (Serum)* | `5cxhcjlTRsl` |
+| **5** | **Maßnahmen** | | |
+| 5.1 | Weitere Diagnostik | *Azidose bei Ketose*, *Laktatazidose* | `6TJqN3miGya` |
+| 5.2 | Hungerketose | Indikation zur Messung in der Schwangerschaft, Behandlung eines positiven Nachweises, Schaden Ketonkörper in der Schwangerschaft? | `69WCCUPGrf8` |
+| 5.3 | Diabetische Ketoazidose | – | `65FhOzjnfyC` |
+| 5.4 | Ketose unter Therapie mit SGLT2-Inhibitoren | *Maßnahmen bei Verdacht* | `6RoGrExUjsT` |
+| **6** | **Patientenschulung zum Thema Ketoazidose** | | |
+| 6.1 | Kursübersicht | – | `5yPBrxMp2OF` |
+| 6.2 | Ketoazidose verstehen | – | `61MshZFG2hx` |
+| 6.3 | Risikofaktoren kennen, Ketoazidose erkennen | – | `5wCsNDPjQg7` |
+| 6.4 | Ketoazidose behandeln | – | `5h1vmZbo2CA` |
+| 6.5 | Der persönliche Plan | – | `5ybdvscaQS3` |
 
-- Each chapter starts with a *Kapitelstart* slide that holds only navigation hints and, in Ch. 2, 3, 5 and 6, tabs to the sub-topics. These slides have no learning content.
-- A large part of the medical detail sits in **pop-up layers** ("Hier klicken") on top of a slide. In total the module has 60 layers: 29 content pop-ups, 27 feedback layers of the knowledge check and quiz, and 4 excluded layers: 3 that are never shown in Ch. 6 and 1 on scene 11 (see [3.7](#37-unreachable-and-duplicated-content)).
-- Scene 2 (Impressum, Hinweise) is not linked from any slide. It is opened by the player button "Informationen". A second player button leads to the Übersicht.
-- The navigation menu (`frame.xml`) lists the chapters, the sub-topic slides of Ch. 2, the quiz questions and the Abschluss.
+Chapters 1–5 explain medical content. Chapter 6 differs: it outlines a patient education course as agenda items (e.g. "Übersäuerung des Blutes", "Insulin spritzen") without explaining them.
 
-### 3.2 Chapter and slide titles
+Outside the hierarchy, the module has:
 
-Titles exist in three places and do not agree:
+- **Frame:** title slide, learning objectives, *Übersicht* (scene 1); Impressum and *Hinweise zum Lernen* (scene 2); *Abschluss* (scene 10).
+- **Questions:** the knowledge check in topic 1.1 and the quiz with 10 questions (scene 9), see [3.6](#36-questions).
+- **Navigation slides:** one *Kapitelstart* per chapter, with only navigation hints and, in chapters 2, 3, 5 and 6, the tabs to the topics.
 
-| Source | Example |
-|---|---|
-| Slide title in `data.js` | Generic or repeated: "Kapitelstart" (7×), "Acetoacetat oder ß-OHB ? /1" (2×), "Entstehung von Ketonkörpern" in Ch. 2 and Ch. 3, "Weitere Maßnahmen" for the sub-topic "Weitere Diagnostik" |
-| Navigation menu in `frame.xml` | "Was wird wie und wann sollte gemessen werden?", "Beurteilung der erhobenen Werte" |
-| Text on the Übersicht slide | "Was kann wie und wann sollte gemessen werden?", "Beurteilung der Werte" |
+Together with the excluded scene 11 (see [3.7](#37-unreachable-and-duplicated-content)) this accounts for all 44 slides.
 
-Chapter names are taken from the navigation menu. Slide names come from the heading text on the slide, with the `data.js` title as a fallback.
+### 3.2 Navigation
+
+- The *Übersicht* slide is a hub. It links to the *Kapitelstart* slide of every chapter, the quiz and the *Abschluss*. Every chapter returns to it at the end.
+- Within a chapter, the topics are reached in order or through the tabs on the *Kapitelstart* slide.
+- Scene 2 is not linked from any slide. It is opened by the player button "Informationen". A second player button leads to the *Übersicht*.
+- Besides the 29 content pop-ups, the module has 27 feedback layers (knowledge check and quiz) and 4 excluded layers (see [3.7](#37-unreachable-and-duplicated-content)), 60 layers in total.
 
 ### 3.3 Learning objectives
 
-The learning objectives slide lists five objectives. None of them is linked to content in the export. By content they map as follows:
+The learning objectives slide lists five objectives. The export does not link them to content. By content they map as follows:
 
-| # | Objective (shortened) | Content | Quiz |
+| # | Objective (shortened) | Topics | Quiz |
 |---|---|---|---|
-| 1 | Herkunft der Ketonkörper aus dem Lipidstoffwechsel | Ch. 1 explanation slide; Ch. 2 Beteiligte, Entstehung | 1, 7, 9 |
-| 2 | Mechanismen der Entstehung benennen | Ch. 1 situations and explanation; Ch. 2 Entstehung, was passiert mit ihnen | 6, 7, 9 |
-| 3 | Diagnostik veranlassen und Befunde interpretieren | Ch. 3 wann messen; Ch. 4 Bewertung; Ch. 5 Weitere Diagnostik | 2, 3, 8, 10 |
-| 4 | Unterschied Ketonkörper im Blut und im Urin | Ch. 3 Ketonkörper, Acetoacetat oder ß-OHB; Ch. 4 Bewertung | 5 |
-| 5 | Anlassbezogene Behandlung entwickeln | Ch. 5 Hungerketose, diabetische Ketoazidose, SGLT2-Inhibitoren; Ch. 6 behandeln, persönlicher Plan | 4 |
+| 1 | Herkunft der Ketonkörper aus dem Lipidstoffwechsel | 1.2, 2.1, 2.2 | 1, 7, 9 |
+| 2 | Mechanismen der Entstehung benennen | 1.1, 1.2, 2.2, 2.3 | 6, 7, 9 |
+| 3 | Diagnostik veranlassen und Befunde interpretieren | 3.3, 4.1, 5.1 | 2, 3, 8, 10 |
+| 4 | Unterschied Ketonkörper im Blut und im Urin | 3.1, 3.2, 4.1 | 5 |
+| 5 | Anlassbezogene Behandlung entwickeln | 5.2, 5.3, 5.4, 6.4, 6.5 | 4 |
 
-Ch. 6 is not named by any objective. It outlines a patient education course on ketoacidosis (agenda items rather than explained content) and is the only chapter without a quiz question.
+No objective names patient education. Chapter 6 is covered only by objective 5, through its treatment topics.
 
 ### 3.4 Recurring concepts
 
-Several concepts run through multiple chapters. They connect the chapters by meaning and are the main candidates for nodes and relations in the knowledge graph.
+Several concepts run through multiple chapters and connect them by meaning:
 
-| Concept | Where it appears |
+| Concept | Topics |
 |---|---|
-| **Situations that cause ketosis**: fasting in pregnancy, prolonged fasting, severe illness in type 1 diabetes, SGLT2 inhibitors in type 2 diabetes, insulin deficiency | Introduced in Ch. 1 → when to measure per group in Ch. 3 → measures per situation in Ch. 5 → risk factors in Ch. 6 |
-| **The three ketone bodies**: acetoacetate, ß-hydroxybutyrate (ß-OHB), acetone | Formation and fate in Ch. 2 → share and measurement site (urine, serum, breath) in Ch. 3 → assessment scales in Ch. 4 |
-| **Mechanism**: glucose deficiency → less oxaloacetate → acetyl-CoA cannot enter the citric acid cycle → ketone bodies | Short form in Ch. 1 → full form in Ch. 2 → reversed as the principle of breakdown and treatment in Ch. 2 and Ch. 5 |
-| **SGLT2 inhibitors** | Situation in Ch. 1 → urine test not representative, measure from about 200 mg/dl in Ch. 3 → "Cave" for a negative urine result in Ch. 4 → own measures slide in Ch. 5 → risk factor and euglycaemic ketoacidosis in Ch. 6 |
-| **Severity grades** (thresholds for serum and urine) | Defined in Ch. 4 → above 3 mmol/l a medical emergency for the hospital; treatment in Ch. 5; mentioned in Ch. 6 |
-| **Pregnancy** | Situation in Ch. 1 → morning measurement in Ch. 3 → Hungerketose in Ch. 5 |
+| **Situations that cause ketosis**: fasting in pregnancy, prolonged fasting, severe illness in type 1 diabetes, SGLT2 inhibitors in type 2 diabetes, insulin deficiency | Introduced in 1.1, 1.2 → when to measure in 3.3 → measures in 5.2, 5.3, 5.4 → risk factors in 6.3 |
+| **The three ketone bodies**: acetoacetate, ß-hydroxybutyrate (ß-OHB), acetone | Formation and fate in 2.2, 2.3 → share and measurement site (urine, serum, breath) in 3.1, 3.2 → assessment scales in 4.1 |
+| **Mechanism**: glucose deficiency → less oxaloacetate → acetyl-CoA cannot enter the citric acid cycle → ketone bodies | Short form in 1.2 → full form in 2.1, 2.2 → reversed as the principle of breakdown in 2.3 and of treatment in 5.3 |
+| **SGLT2 inhibitors** | Situation in 1.2 → urine test not representative in 3.1, 3.2; measure from about 200 mg/dl in 3.3 → caution with a negative urine result in 4.1 → measures in 5.4 → patient education in 6.2–6.4 |
+| **Severity grades** (thresholds for serum and urine) | Defined in 4.1 → further diagnostics in 5.1 → patient education in 6.2 |
+| **Pregnancy** | Situation in 1.2 → morning measurement in 3.3 → *Hungerketose* in 5.2 |
 
-### 3.5 Explicit references in the text
+### 3.5 Explicit references
 
 | From | Text | To |
 |---|---|---|
-| Ch. 1, explanation slide | "Wie Ketonkörper entstehen, sehen Sie im nächsten Kapitel" | Ch. 2 |
-| Ch. 3, Ketonkörper, urine pop-up | "Achtung unter Therapie mit SGLT2-Hemmern! (siehe nächstes Chart)" | Ch. 3, Acetoacetat oder ß-OHB |
-| Ch. 5, Weitere Diagnostik, pop-up | Pathogenesis "wie sie in diesem E-Learning-Modul dargestellt ist" | Ch. 2 |
-| Ch. 5, diabetische Ketoazidose | The measures also count as treatment of ketosis | Ch. 5 in general |
-| Ch. 5, Hungerketose | "siehe auch E-Learning-Modul „Stoffwechsel in der Schwangerschaft“" | Another module (not delivered) |
-| Ch. 3, Ketonkörper, pop-up | Quote with source: ADA Position Statement, Diabetes Care 2004 | External literature |
+| 1.2 | "Wie Ketonkörper entstehen, sehen Sie im nächsten Kapitel" | Chapter 2 |
+| 3.1, pop-up *Acetoacetat* | "Achtung unter Therapie mit SGLT2-Hemmern! (siehe nächstes Chart)" | 3.2 |
+| 5.1, pop-up *Azidose bei Ketose* | Pathogenesis "wie sie in diesem E-Learning-Modul dargestellt ist" | Chapter 2 |
+| 5.2 | "siehe auch E-Learning-Modul „Stoffwechsel in der Schwangerschaft“" | Another module (not delivered) |
+| 3.1, pop-up *Was soll gemessen werden?* | Quote with source: ADA Position Statement, Diabetes Care 2004 | External literature |
 | Learning objectives slide | Author information and notes via "Informationen" | Scene 2 |
 
-### 3.6 Questions and the content they test
+### 3.6 Questions
 
-The module contains one knowledge check and one quiz. The export defines the correct answers but not which content a question tests. The mapping below is derived from the question texts.
-
-- **Knowledge check** (Ch. 1, "In welchen Situationen können Ketonkörper auftreten?"): multiple response, tracked, not part of the quiz. The following slide explains the answers.
+- **Knowledge check** (1.1, "In welchen Situationen können Ketonkörper auftreten?"): multiple response, tracked, not part of the quiz. Topic 1.2 explains the answers.
 - **Quiz** (scene 9): 10 questions, 10 points each, pass mark 70 %. Types: multiple response (1, 3, 4, 6, 10), drag-and-drop matching (2, 5, 8, 9), sequence (7).
 
-| Question | Topic | Tested content |
-|---|---|---|
-| 1 | Which terms denote ketone bodies? | Ch. 2 Entstehung; Ch. 3 Ketonkörper |
-| 2 | Match patient cases to findings | Ch. 1 situations; Ch. 4 Bewertung |
-| 3 | Data needed to judge the severity of a derailment | Ch. 4 Bewertung |
-| 4 | Urgent measures in ketoacidosis | Ch. 5 diabetische Ketoazidose |
-| 5 | Properties of acetoacetate vs ß-OHB | Ch. 3 Acetoacetat oder ß-OHB; Ch. 4 Bewertung |
-| 6 | When can ketone bodies form? | Ch. 1 |
-| 7 | Order the steps leading to fasting ketosis | Ch. 1 explanation slide; Ch. 2 Entstehung |
-| 8 | Lactate vs ß-OHB in metabolic acidosis | Ch. 5 Weitere Diagnostik |
-| 9 | Place the substances in the metabolic diagram | Ch. 2 Entstehung (same diagram) |
-| 10 | When should ketone bodies be measured? | Ch. 3 wann messen; Ch. 5 Hungerketose |
+The export defines the correct answers but not which content a question tests. By content:
 
-Questions per chapter (a question can test more than one): Ch. 1: 3, Ch. 2: 3, Ch. 3: 3, Ch. 4: 3, Ch. 5: 3, Ch. 6: 0.
+| Question | Topic of the question | Tested topics |
+|---|---|---|
+| 1 | Which terms denote ketone bodies? | 2.2, 3.1 |
+| 2 | Match patient cases to findings | 1.2, 4.1 |
+| 3 | Data needed to judge the severity of a derailment | 4.1 |
+| 4 | Urgent measures in ketoacidosis | 5.3 |
+| 5 | Properties of acetoacetate vs ß-OHB | 3.2, 4.1 |
+| 6 | When can ketone bodies form? | 1.1, 1.2 |
+| 7 | Order the steps leading to fasting ketosis | 1.2, 2.2 |
+| 8 | Lactate vs ß-OHB in metabolic acidosis | 5.1 |
+| 9 | Place the substances in the metabolic diagram | 2.2 (same diagram) |
+| 10 | When should ketone bodies be measured? | 3.3, 5.2 |
+
+Chapters 1–5 are tested by three questions each, chapter 6 by none. 8 of the 18 topics are not tested by any question: 2.1, 2.3, 5.4 and all of chapter 6.
 
 ### 3.7 Unreachable and duplicated content
 
-Some content is in the export but cannot be reached by a learner, or exists more than once:
-
 | Content | Finding | Handling |
 |---|---|---|
-| Scene 11 "Hungerketose" | Older variant of the Ch. 5 Hungerketose slide with partly different wording; no slide links to it, only a second "Maßnahmen" entry in the menu | Exclude |
-| 3 pop-up layers in Ch. 6 (Risikofaktoren, behandeln, persönlicher Plan) | Never shown by any trigger; their texts are copies of the Ch. 5 pregnancy and SGLT2 pop-ups | Exclude |
-| Scene 10 "Abschluss" | Closing text with the author's e-mail address | Exclude the address |
+| Scene 11 *Hungerketose* | Older variant of topic 5.2 with partly different wording and 1 pop-up; no slide links to it, only a second "Maßnahmen" entry in the menu | Exclude |
+| 3 layers in 6.3, 6.4, 6.5 | Never shown by any trigger; their texts are copies of pop-ups in 5.2 and 5.4 | Exclude |
+| *Abschluss* | Closing text with the author's e-mail address | Exclude the address |
 
 The extraction should therefore follow the triggers rather than take every layer in a slide file.
+
+### 3.8 Conclusion
+
+- **The hierarchy can be read from the export.** Chapters, topics and pop-ups with their names follow from the menu, the *Kapitelstart* tabs and the triggers. Every text can be traced to a slide ID and a layer ID.
+- **The topic is the central unit.** Learning objectives, concepts and questions all map to topics, so topics are the natural anchor for content, provenance and question generation.
+- **The cross-links have to be created by us.** Objectives, recurring concepts and question-to-topic links are not in the export. The mappings in 3.3–3.6 can serve as a first reference to check the pipeline against.
+- **Recurring concepts are the main candidates for content nodes** in the knowledge graph, and the hierarchy for structural nodes.
+
+How these findings are modelled is decided in the canonical document model (#14) and the knowledge graph schema (#6).
