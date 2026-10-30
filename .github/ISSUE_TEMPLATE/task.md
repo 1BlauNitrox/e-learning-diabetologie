@@ -25,14 +25,3 @@ assignees: []
 <!-- A verifiable checklist. A reviewer must be able to tick off every item. -->
 
 - [ ]
-
----
-
-### Definition of Ready
-
-<!-- Tick all items before moving the issue from Backlog to Ready. -->
-
-- [ ] Purpose, description and outcome are clear to both team members
-- [ ] Acceptance criteria are concrete and verifiable
-- [ ] Dependencies and blockers (other issues, data access, supervisor input) are resolved
-- [ ] Labels and priority are set
