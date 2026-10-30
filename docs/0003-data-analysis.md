@@ -355,3 +355,22 @@ The module has **no video and no audio** (`meta.xml`: `totalvideo="0"`, `totalau
 - **Some content depends on images.** The metabolism diagram in 2.2 and quiz question 9 combine drawings with text boxes. The solutions of the knowledge check and of quiz questions 5 and 9 are shown as screenshots; the same solutions are also defined as data in `data.js` (see [4.4](#44-questions)).
 - **Images are reused.** The structural formulas appear on the title slide and in 3.1, and the liver and fat cell drawings appear in 2.2 and quiz question 9.
 - **The photos illustrate** and do not add information, apart from the product labels in 3.2.
+
+## 6. Data quality and open questions
+
+### 6.1 Data quality
+
+- **Complete and machine-readable:** All text, the structure, the quiz with its correct answers and the navigation can be read from the export (sections [3](#3-content-structure) and [4](#4-technical-format)).
+- **Manual mappings:** The links between learning objectives, topics, concepts and questions (3.3–3.6) were derived by reading the texts. They are not in the export and have not been reviewed by a domain expert.
+- **Content in images:** Chapter 6 and parts of 2.2 and quiz question 9 cannot be understood from the text alone (see [5.3](#53-findings)).
+- **Excluded content:** Scene 11 and three hidden layers in chapter 6 are unreachable or duplicated, and the author's e-mail address must not be extracted (see [3.7](#37-unreachable-and-duplicated-content)).
+- **Single module:** All findings are based on Ketonkörper. That other modules follow the same structure is likely (same template) but not verified.
+
+### 6.2 Open questions
+
+| Question | Status |
+|---|---|
+| May we use the content of the modules in the project? | Yes |
+| Can further modules be obtained through Review 360? | Open |
+| Do we transcribe the 16 course slides of chapter 6, and if so, how? | Open; decided later |
+| How are images used in general (ignored, referenced, described)? | Open; decided later |
