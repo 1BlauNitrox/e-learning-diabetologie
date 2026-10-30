@@ -59,9 +59,9 @@ How scenes 10 and 11 are reached, and how the menu chapters map to the scenes, i
 | Storyline export: `data.js` and the 44 slide files | Yes: all text including pop-up layers, the structure and the quiz | Yes: JSON wrapped in JavaScript | **Primary source** |
 | `mobile/` images | Not a slide source: images used inside slides | No | Existence and position recorded, see [Media](#5-media) |
 | PDF handout | No: screenshots of 23 of the 44 slides; no quiz, Impressum or patient education | No: text only via OCR | Not used |
-| Review 360, Ketonkörper | Same player and format as the export | Yes | Not used; a different version, see below |
+| Review 360, Ketonkörper | Same content as the export, newer publish | Yes | Not used, see below |
 | Review 360, Blutzuckermessung | Same template and format | Yes | Out of scope |
 
 - **Export over handout:** Terms that appear in the handout images, including those in pop-up layers (e.g. "Penicillamin", "osmotische Diurese", "accelerated starvation", "ADA Position"), are all present as text in the export. The handout adds no content.
-- **Version:** The Review 360 page of Ketonkörper shows a newer publish (2026-09-15, project ID `6RKvklppYka`) than our export (2026-09-08, `63XwQxu12fb`). We work with the export; which version is canonical is an open question.
+- **Version:** The Review 360 page of Ketonkörper is a newer publish (2026-09-15, project ID `6RKvklppYka`) than our export (2026-09-08, `63XwQxu12fb`). A comparison of all slide files, `data.js` and `paths.js` shows the same slides, texts, quiz, navigation and image references. The only differences are the version label on the title slide (`V07/2026` in the export, `V09/2026` on Review 360), the quiz resume dialog in player scene 0 (only in the export) and IDs regenerated on publishing. Image files were not compared byte by byte. **We use the local export.**
 - **Other modules:** Blutzuckermessung uses the same Storyline template (`DiabetesDE_Template_360u22_20190111`) and export format. A pipeline built on this format should therefore carry over to further modules. Nothing was downloaded from Review 360.
