@@ -224,8 +224,8 @@ slide
 ```
 
 - **Objects** across all slides: 1,080 `vectorshape` (text boxes, shapes, buttons, images), 118 `stategroup` (buttons with states), 12 `objgroup`, 8 `scrollarea`, 7 `shufflegroup` (quiz answers). Objects carry their position and size.
-- **Text** is taken from `vartext`. `altText` mostly repeats the visible text. For images it holds a description or a file name (e.g. `Chemical_structural_formula_of_acetic_acid.svg`).
-- **Order:** objects are stored in layering order, which is not always the reading order. The positions allow sorting top to bottom.
+- **Text** is taken from `vartext`. Besides `textLib`, it occurs in `data.textdata` and `data.itemlist` (drop-down items). `altText` mostly repeats the visible text. For images it holds a description or a file name (e.g. `Chemical_structural_formula_of_acetic_acid.svg`).
+- **Order:** objects are stored in layering order, which is not always the reading order. Positions of nested objects are relative to their parent; the absolute positions allow sorting into rows from top to bottom and, within a row, from left to right.
 
 Text quirks the extraction has to handle:
 
@@ -234,7 +234,9 @@ Text quirks the extraction has to handle:
 | `^%^` encodes `%` (22 occurrences) | `Acetoacetat (Anteil etwa 20^%^)` | Replace with `%` |
 | Line breaks as `\n` and `\r`, layout with tabs | `Bis 0,6 mmol/l\t\tNormalbefund` | Normalize; tabs mark table-like rows |
 | Button labels with an instruction | `Nutzung - Hier klicken -` | Strip the instruction |
-| Boilerplate on many slides | `Diabetologie online lernen \| Ketonkörper`, `Weiter`, `Zum Schließen klicken`, `Alle Bilder © articulate` | Drop |
+| Boilerplate on many slides | `Diabetologie online lernen \| Ketonkörper` (also with `l` instead of `\|` and other suffixes such as `\| Quiz`), `Weiter`, `Zum Schließen klicken`, `Alle Bilder © articulate`, `Beide Bilder © articulate` | Drop |
+| Player variables filled in at runtime | `%_player.5X8JOp5iKWb.$Score%` on the quiz result slide | Drop |
+| Each drop-down of quiz question 7 lists all items | 5 drop-downs × 5 items | Keep each text once per layer |
 
 ### 4.3 Triggers
 
@@ -246,37 +248,62 @@ A pop-up is opened by an event on a button object:
 ```
 
 - The button is either a `vectorshape` with a text label or a `stategroup` without a label (e.g. numbered buttons on a graphic, see 3.1).
-- Quiz feedback layers are shown by the action group `ActGrpOnSubmitButtonClick`, depending on the answer status.
-- A layer that no `show_slidelayer` action references is never shown (see [3.7](#37-unreachable-and-duplicated-content)).
+- Feedback layers of the knowledge check and the quiz are shown by `show_slidelayer` actions in the `answers[].actions` of the question in `data.js`, depending on the answer status. Solution layers are opened by a button on a feedback layer, and the result layers of the quiz by slide events.
+- A layer that no `show_slidelayer` action references, neither in the slide file nor in `data.js`, is never shown (see [3.7](#37-unreachable-and-duplicated-content)).
 - Jumps between slides are `gotoplay` actions. `slideMap.linksTo` in `data.js` summarizes them per slide.
 - The player buttons "Informationen" and "Übersicht" are defined in the `events` of `data.js`.
 
 ### 4.4 Questions
 
-Questions are defined in `data.js` under `scenes[].slides[].interactions[]`; the question text itself is on the slide. Quiz settings (pass mark, scoring, list of question slides) are in `quizzes[]`; their values are in [3.6](#36-questions).
+Questions are defined in `data.js` under `scenes[].slides[].interactions[]`. The question text itself is on the slide and is not marked as such: it is the base-layer text that is not an answer item. Quiz settings (pass mark, scoring, list of question slides) are in `quizzes[]`; their values are in [3.6](#36-questions).
 
 | Field | Content |
 |---|---|
 | `type` | `multipleresponse`, `matching` or `sequence` |
 | `choices[]` | Answer options with `id` and `lmstext` |
+| `statements[]` | Matching and sequence only: drop targets or positions with `id` and `lmstext` |
 | `answers[]` | One `correct` and one `incorrect` answer with `points`; the correct one defines the solution in `evaluate.statements` |
 
 How the solution is encoded depends on the type:
 
 - **Multiple response:** the statements list the choices that must be selected.
-- **Matching:** each statement pairs a choice (drag item) with a `statementid` (drop target). The target is an object in the slide file whose ID follows the `statement_` prefix, and its text is the matched item. Drag items carry an LMS prefix such as `Text-feld 3 - Nachweis im Urin`, which is stripped. In question 9 the targets are unlabelled boxes in a diagram ("Rechteck 1–4"), so the solution only makes sense with the image.
-- **Sequence:** the order of the statements is the correct order of the choices.
+- **Matching:** each statement pairs a choice (drag item) with a `statementid` (drop target). Choices and targets are objects in the slide file whose IDs follow the `choice_` and `statement_` prefixes. Their `lmstext` carries an LMS prefix such as `Text-feld 3 - Nachweis im Urin` and loses line breaks, so the text of the slide object is preferred. In question 9 the targets are unlabelled boxes in a diagram ("Rechteck 1–4"), so the solution only makes sense with the image.
+- **Sequence:** the order of the statements is the correct order of the choices. The slide objects are drop-downs that each list all items, so the choice texts are taken from `lmstext`.
 
-Most feedback layers are generic ("Richtig", "Falsch"). Questions 8 and 9 add an explanation or show the solution.
+Most feedback layers are generic ("Richtig", "Falsch"). Question 8 adds an explanation; the knowledge check and questions 5 and 9 show the solution as a screenshot.
 
 ### 4.5 Implications for the extraction
 
 - Read `data.js`, the slide files and `frame.xml`. `paths.js` and `frame.js` add no content.
 - Take text from `vartext`, and `altText` only for images.
 - Follow the triggers: content pop-ups are layers referenced by `show_slidelayer`; unreferenced layers are skipped.
+- Skip scenes that no `gotoplay` action leads to.
 - Clean the quirks in 4.2 and drop boilerplate.
 - Keep slide ID, layer ID and object ID with every text as provenance.
 - Resolve matching solutions through the drop-target objects on the slide.
+
+### 4.6 Extraction prototype
+
+`prototype/extract.py` implements 4.5 for one module with the Python standard library. It writes one JSON file with the scenes, slides and their layers (base, pop-up, feedback) with texts in reading order, the questions with choices, solution and question text, and the excluded scenes and layers. Every text keeps its slide, layer and object ID. The output contains the source content, so it goes to the git-ignored `data/extracted/`.
+
+```
+python prototype/extract.py "data/raw/2026 E-Learning Diabetologie/Ketonkörper" data/extracted/ketonkoerper.json
+python -m unittest discover -s prototype
+```
+
+The tests check the cleaning rules and, if the raw data is present, the result for Ketonkörper. Results on Ketonkörper:
+
+- **Structure:** 43 slides in 10 scenes, 29 pop-ups and 27 feedback layers. Scene 11 and the 3 hidden layers are excluded by the rules in 4.5, without a module-specific list. This matches the counts in [3.1](#31-outline) and [3.2](#32-navigation).
+- **Questions:** the knowledge check and the 10 quiz questions with their types, correct answers, pairs and order, as in [3.6](#36-questions).
+- **Text:** 355 texts after cleaning; no `^%^`, boilerplate or e-mail address remains, umlauts are intact.
+
+Limitations:
+
+- **Reading order** is right for text slides, pop-ups and quiz slides. On slides that place labels on a graphic (title slide, 2.1, 2.2, quiz question 9) the labels are read row by row, which does not follow the graphic. On 3.2 some lines appear twice, once as a block and once as separate text boxes.
+- **Names** of chapters and topics are taken only from the menu; topic and pop-up names as in [3.1](#31-outline) are not derived yet.
+- **Question text** contains all base-layer text that is not an answer item, e.g. instructions and the diagram labels of question 9.
+- **Quiz question 9** has no target labels; its pairs have `null` targets.
+- **Images** are not processed, so chapter 6 is limited to its headings and agenda items (see [5.3](#53-findings)).
 
 ## 5. Media
 

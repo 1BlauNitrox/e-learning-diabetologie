@@ -9,6 +9,8 @@ Goal, scope and target users: [`docs/0002-project-scope.md`](docs/0002-project-s
 | Path | Content |
 |---|---|
 | `docs/` | Numbered knowledge base: requirements, decisions and findings |
+| `prototype/` | Extraction prototype for one Storyline module and its tests, see [`docs/0003-data-analysis.md`](docs/0003-data-analysis.md#46-extraction-prototype) |
+| `data/` | Local only and git-ignored: raw data in `data/raw/`, extraction output in `data/extracted/` |
 | `.github/` | Issue and pull request templates |
 | `AGENTS.md` | Instructions for AI coding agents (`CLAUDE.md` imports it) |
 
