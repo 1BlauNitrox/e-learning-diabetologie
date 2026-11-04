@@ -1,6 +1,6 @@
 # 0002 – Project Scope
 
-**Status:** agreed within the team; awaiting confirmation by our supervisor (see [Open questions](#open-questions)).
+**Status:** agreed within the team; goal confirmed by our supervisor. Remaining questions are listed under [Open questions](#open-questions).
 
 ## Problem
 
@@ -8,7 +8,7 @@ The website *Diabetologie online lernen* offers German e-learning modules on dia
 
 ## Goal
 
-A pipeline that extracts the content of e-learning modules and builds a **knowledge graph** of their concepts and relations. It works on the given sample and is designed to scale to further modules, courses and websites. The graph is the foundation for **question generation** and **question answering**.
+A pipeline that extracts the content of e-learning modules and builds a **knowledge graph** of their concepts and relations. It works on the given sample and is designed to scale to further modules, courses and websites. The graph is the backbone for further services. Used as an **index** that leads to the relevant material, it is already a substantial result; it is also the foundation for **question generation** and **question answering**.
 
 ## Target users
 
@@ -41,6 +41,7 @@ In order of priority:
 2. **Evaluation** of the generated questions against the existing quiz questions in the modules.
 3. **Question answering**: a chatbot that answers questions using the graph.
 4. **Simple user interface**, e.g. with Streamlit.
+5. **Image descriptions**: describe images with a vision language model (VLM) where this is simple, and add the descriptions to the graph.
 
 ### Out of scope
 
@@ -49,11 +50,12 @@ In order of priority:
 - Medical validation of generated content (this needs domain experts; we preserve provenance so experts can check it)
 - User accounts, progress tracking and LMS integration
 - Any patient data
+- Videos
 
 ## Constraints
 
 - **Language:** the source content is German, and any generated learning content is German. Code and documentation are English.
-- **Data:** we have a small sample: one Storyline HTML5 export with its PDF handout, and two Articulate Review 360 links. Usage rights are unclear and the repository is public, so raw data is not committed.
+- **Data:** we have a small sample: one Storyline HTML5 export with its PDF handout, and two Articulate Review 360 links. Further modules by the same author will follow; our supervisor sent a list of them for us to choose from. Whether the data may be published is unclear and the repository is public, so raw data is not committed.
 - **Correctness:** this is medical content. Every graph fact must be traceable to its source.
 - **Tools:** the course description suggests Python, crewAI, Streamlit and PostgreSQL. The final stack is decided in [#7](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/7).
 - **Deployment:** no target environment is known. Everything must run locally.
@@ -62,9 +64,8 @@ In order of priority:
 
 To be clarified with our supervisor:
 
-1. Is the core deliverable (the knowledge graph pipeline) the expected result, with question generation as a bonus?
-2. Can we get more modules or the full website content, and in which format? Can we access the content of the Review 360 module *Blutzuckermessung in Klinik und Praxis*?
-3. May the data, or a graph derived from it, be published in the public repository?
-4. Which LLM providers may process the content? Is there a budget, or are there university-hosted models?
-5. Should the graph align with an existing medical ontology or terminology (e.g. MeSH, SNOMED CT)?
-6. Which question types are expected (e.g. multiple choice, free text)?
+1. Which further modules do we take from the supervisor's list, and in which format do we get them? Can we access the content of the Review 360 module *Blutzuckermessung in Klinik und Praxis*?
+2. May the data, or a graph derived from it, be published in the public repository?
+3. Which LLM providers may process the content? Is there a budget, or are there university-hosted models?
+4. Should the graph align with an existing medical ontology or terminology (e.g. MeSH, SNOMED CT)?
+5. Which question types are expected? Our supervisor named factual, yes/no and comparative questions, among others, and wants to discuss this soon.
