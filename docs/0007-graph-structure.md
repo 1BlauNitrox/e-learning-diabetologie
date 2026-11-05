@@ -112,12 +112,9 @@ A concept gets its own node when the material says something that tells it apart
 
 ## Working with the graph
 
-**Index.** Where is a concept explained?
+The paths are given as patterns; queries in a concrete query language belong to the tooling ([#17](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/17)).
 
-```cypher
-MATCH (:Concept {name: 'SGLT2-Inhibitor'})<-[:MENTIONS]-(:Passage)<-[:HAS_PASSAGE]-(s:Section)
-RETURN DISTINCT s.name
-```
+**Index.** Where is a concept explained? Concept ← `MENTIONS` ← Passage ← `HAS_PASSAGE` ← Section.
 
 **Question generation.** Start from a learning objective or topic, collect its facts through `COVERS` → `HAS_PASSAGE` ← `SUPPORTED_BY`, and choose a pattern by fact kind:
 
@@ -133,18 +130,7 @@ RETURN DISTINCT s.name
 
 A generated question is stored as `Question {origin: 'generated'}` with `TESTS` → its facts, so its answer can be checked and coverage measured.
 
-**Question answering.** Find concepts in the user's question by `name` and `aliases`, follow their facts including conditions, and answer only from these facts with their `quote` and section. Value questions run directly on `CONDITION`:
-
-```cypher
-WITH 2.0 AS value
-MATCH (f:Fact {kind: 'threshold'})-[:SUBJECT]->(c:Concept {name: 'ß-Hydroxybutyrat'}),
-      (f)-[cond:CONDITION]->(c), (f)-[:IMPLIES]->(g), (f)-[s:SUPPORTED_BY]->()
-WITH value, f, g, s, collect(cond) AS conds
-WHERE all(x IN conds WHERE (x.operator = '>' AND value > x.value) OR (x.operator = '<=' AND value <= x.value))
-RETURN g.name, f.statement, s.quote
-```
-
-If nothing matches, the answer is "not covered by the material".
+**Question answering.** Find concepts in the user's question by `name` and `aliases`, follow their facts including conditions, and answer only from these facts with their `quote` and section. Value questions ("ß-OHB 2,0 mmol/l im Serum?") are answered by comparing the value with the `CONDITION` values of the threshold facts: the matching fact `IMPLIES` *schwere Entgleisung*. If nothing matches, the answer is "not covered by the material".
 
 **Coverage.** `TESTS` shows untested material: 8 of 18 topics are not tested by the quiz (as in [0003 §3.6](0003-data-analysis.md#36-questions)), and 2 of 9 options of quiz question 5 have no fact on slide 4.1.
 
@@ -164,7 +150,7 @@ python prototype/graph/build_graph.py data/extracted/ketonkoerper.json prototype
 python -m unittest discover -s prototype/graph
 ```
 
-`prototype/graph/output/graph.json` holds the nodes and edges; `prototype/graph/output/graph.cypher` loads them into an empty Neo4j database. `MENTIONS` is computed by matching concept names and aliases in the passages.
+`prototype/graph/output/graph.json` holds the nodes and edges, independent of any graph database. `MENTIONS` is computed by matching concept names and aliases in the passages.
 
 ![Slide 4.1 in the prototype graph](images/0007-prototype-4.1.svg)
 

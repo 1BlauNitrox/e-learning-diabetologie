@@ -29,9 +29,6 @@ class HelpersTest(unittest.TestCase):
         self.assertFalse(pattern.search("Acetoacetat"))
         self.assertFalse(build_graph.mention_pattern({"name": "BZ", "aliases": []}).search("ABZ"))
 
-    def test_cypher_value(self):
-        self.assertEqual(build_graph.cypher_value({"a": "ß \"x\"", "b": [1, True]}), '{`a`: "ß \\"x\\"", `b`: [1, true]}')
-
 
 class PrototypeGraphTest(unittest.TestCase):
     @classmethod
