@@ -179,7 +179,7 @@ The pop-up layer of scene 11 and the 3 hidden layers are the 4 excluded layers c
 - **The mappings in 3.3–3.6 are a first reference** to check the pipeline against.
 - **Recurring concepts are the main candidates for content nodes** in the knowledge graph, and the hierarchy for structural nodes.
 
-How these findings are modelled is decided in the canonical document model (#14) and the knowledge graph schema (#6).
+The graph structure built on these findings is described in [0007](0007-graph-structure.md); the canonical document model (#14) and the knowledge graph schema (#6) formalise it.
 
 ## 4. Technical format
 
@@ -303,6 +303,7 @@ Limitations:
 - **Names** of chapters and topics are taken only from the menu; topic and pop-up names as in [3.1](#31-outline) are not derived yet.
 - **Question text** contains all base-layer text that is not an answer item, e.g. instructions and the diagram labels of question 9.
 - **Quiz question 9** has no target labels; its pairs have `null` targets.
+- **Pop-ups** are not linked to the button that opens them. Some pop-ups depend on it: on 3.3, the pop-up for *Typ1-Diabetes* never names it in its text.
 - **Images** are not processed, so chapter 6 is limited to its headings and agenda items (see [5.3](#53-findings)).
 
 ## 5. Media
