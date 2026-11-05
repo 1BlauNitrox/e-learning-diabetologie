@@ -160,11 +160,11 @@ If nothing matches, the answer is "not covered by the material".
 The prototype covers *Ketonkörper*: the full source and didactic layers (all 18 topics, 5 learning objectives, 11 questions), 35 concepts and 23 facts for slides 3.3 and 4.1 (590 nodes, 1021 edges). Names, mappings, concepts and facts are in `prototype/graph/manual.json`; everything else is derived from the extraction output.
 
 ```
-python prototype/build_graph.py data/extracted/ketonkoerper.json prototype/graph
-python -m unittest discover -s prototype
+python prototype/graph/build_graph.py data/extracted/ketonkoerper.json prototype/graph/output
+python -m unittest discover -s prototype/graph
 ```
 
-`prototype/graph/graph.json` holds the nodes and edges; `prototype/graph/graph.cypher` loads them into an empty Neo4j database. `MENTIONS` is computed by matching concept names and aliases in the passages.
+`prototype/graph/output/graph.json` holds the nodes and edges; `prototype/graph/output/graph.cypher` loads them into an empty Neo4j database. `MENTIONS` is computed by matching concept names and aliases in the passages.
 
 ![Slide 4.1 in the prototype graph](images/0007-prototype-4.1.svg)
 

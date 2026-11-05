@@ -1,7 +1,7 @@
 """Tests for the prototype graph (docs/0007-graph-structure.md).
 
-Run from the repository root: python -m unittest discover -s prototype
-The committed prototype/graph/graph.json is checked always; the rebuild test is
+Run from the repository root: python -m unittest discover -s prototype/graph
+The committed prototype/graph/output/graph.json is checked always; the rebuild test is
 skipped if data/extracted/ketonkoerper.json is not present.
 """
 
@@ -12,8 +12,8 @@ from pathlib import Path
 
 import build_graph
 
-ROOT = Path(__file__).resolve().parent.parent
-GRAPH = ROOT / "prototype" / "graph" / "graph.json"
+ROOT = Path(__file__).resolve().parents[2]
+GRAPH = ROOT / "prototype" / "graph" / "output" / "graph.json"
 EXTRACTED = ROOT / "data" / "extracted" / "ketonkoerper.json"
 MANUAL_EDGES = {"COVERS", "ASSESSES", "REFERS_TO", "IS_A"}
 

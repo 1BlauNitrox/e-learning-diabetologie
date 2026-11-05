@@ -1,5 +1,5 @@
 {
-  "_comment": "Hand-made part of the prototype graph (docs/0007-graph-structure.md). Everything else is derived from data/extracted/ketonkoerper.json by prototype/build_graph.py. Every entry names its source: a slide ID, a text block ID or a section of docs/0003-data-analysis.md.",
+  "_comment": "Hand-made part of the prototype graph (docs/0007-graph-structure.md). Everything else is derived from data/extracted/ketonkoerper.json by prototype/graph/build_graph.py. Every entry names its source: a slide ID, a text block ID or a section of docs/0003-data-analysis.md.",
 
   "chapters": {
     "_source": "0003 §3.1",

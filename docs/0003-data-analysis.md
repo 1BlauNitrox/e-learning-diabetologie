@@ -284,11 +284,11 @@ Most feedback layers are generic ("Richtig", "Falsch"). Question 8 adds an expla
 
 ### 4.6 Extraction prototype
 
-`prototype/extract.py` implements 4.5 for one module with the Python standard library. It writes one JSON file with the scenes, slides and their layers (base, pop-up, feedback) with texts in reading order, the questions with choices, solution and question text, and the excluded scenes and layers. Every text keeps its slide, layer and object ID. The output contains the source content, so it goes to the git-ignored `data/extracted/`.
+`prototype/extraction/extract.py` implements 4.5 for one module with the Python standard library. It writes one JSON file with the scenes, slides and their layers (base, pop-up, feedback) with texts in reading order, the questions with choices, solution and question text, and the excluded scenes and layers. Every text keeps its slide, layer and object ID. The output contains the source content, so it goes to the git-ignored `data/extracted/`.
 
 ```
-python prototype/extract.py "data/raw/2026 E-Learning Diabetologie/Ketonkörper" data/extracted/ketonkoerper.json
-python -m unittest discover -s prototype
+python prototype/extraction/extract.py "data/raw/2026 E-Learning Diabetologie/Ketonkörper" data/extracted/ketonkoerper.json
+python -m unittest discover -s prototype/extraction
 ```
 
 The tests check the cleaning rules and, if the raw data is present, the result for Ketonkörper. Results on Ketonkörper:
