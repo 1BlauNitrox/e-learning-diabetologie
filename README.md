@@ -11,6 +11,7 @@ Goal, scope and target users: [`docs/0002-project-scope.md`](docs/0002-project-s
 | `docs/` | Numbered knowledge base: requirements, decisions and findings |
 | `prototype/extraction/` | Extraction prototype for one Storyline module and its tests, see [`docs/0003-data-analysis.md`](docs/0003-data-analysis.md#46-extraction-prototype) |
 | `prototype/graph/` | Prototype graph built from the extraction output: builder, hand-made input, tests and generated `output/`, see [`docs/0007-graph-structure.md`](docs/0007-graph-structure.md#prototype) |
+| `scripts/explore/` | Exploration scripts, e.g. the Neo4j spike, see [`docs/0008-graph-tooling.md`](docs/0008-graph-tooling.md#spike) |
 | `data/` | Local only and git-ignored: raw data in `data/raw/`, extraction output in `data/extracted/` |
 | `.github/` | Issue and pull request templates |
 | `AGENTS.md` | Instructions for AI coding agents (`CLAUDE.md` imports it) |

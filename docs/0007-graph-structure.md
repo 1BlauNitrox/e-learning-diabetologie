@@ -112,7 +112,7 @@ A concept gets its own node when the material says something that tells it apart
 
 ## Working with the graph
 
-The paths are given as patterns; queries in a concrete query language belong to the tooling ([#17](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/17)).
+The paths are given as patterns; the same queries in Cypher are in [0008](0008-graph-tooling.md#spike).
 
 **Index.** Where is a concept explained? Concept ← `MENTIONS` ← Passage ← `HAS_PASSAGE` ← Section.
 
