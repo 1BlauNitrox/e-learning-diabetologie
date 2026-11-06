@@ -147,10 +147,17 @@ The prototype covers *Ketonkörper*: the full source and didactic layers (all 18
 
 ```
 python prototype/graph/build_graph.py data/extracted/ketonkoerper.json prototype/graph/output
+python prototype/graph/draw_graph.py prototype/graph/output/graph.json docs/images
 python -m unittest discover -s prototype/graph
 ```
 
 `prototype/graph/output/graph.json` holds the nodes and edges, independent of any graph database. `MENTIONS` is computed by matching concept names and aliases in the passages.
+
+**Whole module** without passages and answer options (184 nodes). `MENTIONS` is drawn from the slide that holds the passage. The two fact clusters sit next to topics 3.3 and 4.1; chapter 6 has no questions attached.
+
+![Prototype graph of Ketonkörper without passages and answer options](images/0007-prototype-overview.svg)
+
+**Slide 4.1 across all layers:** learning objectives and the quiz question that test it, the slide's text blocks, the facts they support and the concepts of these facts.
 
 ![Slide 4.1 in the prototype graph](images/0007-prototype-4.1.svg)
 
