@@ -4,7 +4,7 @@
 
 ## 1. Overview
 
-We received one module of the website *Diabetologie online lernen*: **Ketonkörper**, in German, 44 slides, published on 2026-09-08 with Articulate Storyline 3. The delivery also contains a PDF handout and links to two modules on Articulate Review 360. The first design and implementation of the pipeline uses only this module. All paths below are relative to `data/raw/2026 E-Learning Diabetologie/`.
+We received one module of the website *Diabetologie online lernen*: **Ketonkörper**, in German, 44 slides, published on 2026-09-08 with Articulate Storyline 3. The delivery also contains a PDF handout and links to two modules on Articulate Review 360. The first design and implementation of the pipeline uses only this module; further modules by the same author will follow (see [6.2](#62-open-questions)). All paths below are relative to `data/raw/2026 E-Learning Diabetologie/`.
 
 ### Delivered files
 
@@ -307,7 +307,7 @@ Limitations:
 
 ## 5. Media
 
-This section records which media exist and where they appear. Their content and how we use them are decided later.
+This section records which media exist and where they appear. Videos are not processed. Images may be described with a vision language model where this is simple; this is a low-priority stretch goal ([0002](0002-project-scope.md#stretch-goals)).
 
 The module has **no video and no audio** (`meta.xml`: `totalvideo="0"`, `totalaudio="0"`). It has 54 images: 49 raster files in `mobile/`, 4 SVG files (stored as `story_content/*.js`) and 1 player background pattern. Every image is listed in `assetLib` and placed on a slide through `imagelib[].assetId` (see [4.2](#42-slides-layers-and-objects)); its `altText` is mostly the original file name (e.g. `hunger Foto 1.jpg`). Besides these, `story_content/` holds the module thumbnail and the icon for the handout download.
 
@@ -369,7 +369,7 @@ The module has **no video and no audio** (`meta.xml`: `totalvideo="0"`, `totalau
 - **Encoding and markup:** The payloads are escaped JavaScript strings with a BOM ([4.1](#41-files)), and the texts contain encoded characters, mixed line breaks, button instructions and boilerplate ([4.2](#42-slides-layers-and-objects)).
 - **Content in images:** see [5.3](#53-findings).
 - **Unreachable, duplicated and personal content:** see [3.7](#37-unreachable-and-duplicated-content).
-- **Single module:** All findings are based on Ketonkörper. That other modules follow the same structure is likely (same template) but not verified.
+- **Single module:** All findings are based on Ketonkörper. That other modules follow the same structure is likely (same template) but not verified; this can be checked once further modules arrive.
 
 ### 6.2 Open questions
 
@@ -377,6 +377,6 @@ The module has **no video and no audio** (`meta.xml`: `totalvideo="0"`, `totalau
 |---|---|
 | May we use the content of the modules in the project? | Yes |
 | May the raw data be published in the public repository? | Open; until then it is not committed |
-| Can further modules be obtained through Review 360? | Open |
-| Do we transcribe the 16 course slides of chapter 6, and if so, how? | Open; decided later |
-| How are images used in general (ignored, referenced, described)? | Open; decided later |
+| Do we get further modules? | Yes: further modules by the same author; our supervisor sent a list to choose from |
+| Which modules do we choose, and in which format do we get them? | Open |
+| How are images and videos used? | Videos are not processed. Images, including the 16 course slides of chapter 6, may be described with a vision language model where this is simple; low priority |
