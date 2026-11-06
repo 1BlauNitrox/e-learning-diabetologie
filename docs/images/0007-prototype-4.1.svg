@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="540" viewBox="0 0 1110 540" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="85.0" y="38" text-anchor="middle" font-size="14" font-weight="600" fill="#2C2C2A">Didactic</text>
+<text x="325.0" y="38" text-anchor="middle" font-size="14" font-weight="600" fill="#2C2C2A">Source</text>
+<text x="680.0" y="38" text-anchor="middle" font-size="14" font-weight="600" fill="#2C2C2A">Facts</text>
+<text x="995.0" y="38" text-anchor="middle" font-size="14" font-weight="600" fill="#2C2C2A">Concepts</text>
+<path d="M190,161.0 C150,161.0 150,251.0 190,251.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M190,161.0 C150,161.0 150,281.0 190,281.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M190,161.0 C150,161.0 150,311.0 190,311.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M190,161.0 C150,161.0 150,191.0 190,191.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M190,191.0 C150,191.0 150,341.0 190,341.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M190,161.0 C150,161.0 150,221.0 190,221.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M190,221.0 C150,221.0 150,371.0 190,371.0" fill="none" stroke="#B4B2A9" stroke-width="1" opacity="0.65"/>
+<path d="M150,236.0 C170.0,236.0 170.0,161.0 190,161.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,266.0 C170.0,266.0 170.0,161.0 190,161.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M20,296.0 C-20,296.0 -20,266.0 20,266.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C170.0,296.0 170.0,161.0 190,161.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M460,251.0 C680.0,251.0 680.0,86.0 900,86.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,281.0 C680.0,281.0 680.0,146.0 900,146.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,311.0 C680.0,311.0 680.0,236.0 900,236.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,371.0 C680.0,371.0 680.0,446.0 900,446.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,251.0 C680.0,251.0 680.0,116.0 900,116.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,281.0 C680.0,281.0 680.0,176.0 900,176.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,311.0 C680.0,311.0 680.0,206.0 900,206.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,341.0 C680.0,341.0 680.0,266.0 900,266.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,371.0 C680.0,371.0 680.0,266.0 900,266.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,341.0 C680.0,341.0 680.0,296.0 900,296.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,371.0 C680.0,371.0 680.0,296.0 900,296.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,371.0 C680.0,371.0 680.0,416.0 900,416.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,341.0 C680.0,341.0 680.0,326.0 900,326.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,371.0 C680.0,371.0 680.0,326.0 900,326.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,341.0 C680.0,341.0 680.0,356.0 900,356.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M460,341.0 C680.0,341.0 680.0,386.0 900,386.0" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.65"/>
+<path d="M840,101.0 C870.0,101.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,101.0 C870.0,101.0 870.0,176.0 900,176.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,101.0 C490.0,101.0 490.0,281.0 460,281.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,71.0 C870.0,71.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,71.0 C870.0,71.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,71.0 C490.0,71.0 490.0,251.0 460,251.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,161.0 C870.0,161.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,161.0 C870.0,161.0 870.0,176.0 900,176.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,161.0 C490.0,161.0 490.0,341.0 460,341.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,311.0 C870.0,311.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,311.0 C870.0,311.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,311.0 C490.0,311.0 490.0,371.0 460,371.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,191.0 C870.0,191.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,191.0 C870.0,191.0 870.0,176.0 900,176.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,191.0 C870.0,191.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,191.0 C870.0,191.0 870.0,266.0 900,266.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,191.0 C490.0,191.0 490.0,341.0 460,341.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,221.0 C870.0,221.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,221.0 C870.0,221.0 870.0,176.0 900,176.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,221.0 C870.0,221.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,221.0 C870.0,221.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,221.0 C870.0,221.0 870.0,296.0 900,296.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,221.0 C490.0,221.0 490.0,341.0 460,341.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,251.0 C870.0,251.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,251.0 C870.0,251.0 870.0,176.0 900,176.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,251.0 C870.0,251.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,251.0 C870.0,251.0 870.0,326.0 900,326.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,251.0 C490.0,251.0 490.0,341.0 460,341.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,281.0 C870.0,281.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,281.0 C870.0,281.0 870.0,176.0 900,176.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,281.0 C870.0,281.0 870.0,146.0 900,146.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,281.0 C870.0,281.0 870.0,356.0 900,356.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,281.0 C870.0,281.0 870.0,386.0 900,386.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,281.0 C490.0,281.0 490.0,341.0 460,341.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,341.0 C870.0,341.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,341.0 C870.0,341.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,341.0 C870.0,341.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,341.0 C870.0,341.0 870.0,266.0 900,266.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,341.0 C490.0,341.0 490.0,371.0 460,371.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,371.0 C870.0,371.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,371.0 C870.0,371.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,371.0 C870.0,371.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,371.0 C870.0,371.0 870.0,296.0 900,296.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,371.0 C490.0,371.0 490.0,371.0 460,371.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,401.0 C870.0,401.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,401.0 C870.0,401.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,401.0 C870.0,401.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,401.0 C870.0,401.0 870.0,416.0 900,416.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,401.0 C490.0,401.0 490.0,371.0 460,371.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,431.0 C870.0,431.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,431.0 C870.0,431.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,431.0 C870.0,431.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,431.0 C870.0,431.0 870.0,326.0 900,326.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,431.0 C490.0,431.0 490.0,371.0 460,371.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,461.0 C870.0,461.0 870.0,446.0 900,446.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,461.0 C870.0,461.0 870.0,86.0 900,86.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,461.0 C870.0,461.0 870.0,116.0 900,116.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,461.0 C490.0,461.0 490.0,371.0 460,371.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,131.0 C870.0,131.0 870.0,206.0 900,206.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M840,131.0 C870.0,131.0 870.0,236.0 900,236.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,131.0 C490.0,131.0 490.0,311.0 460,311.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M520,461.0 C480,461.0 480,341.0 520,341.0" fill="none" stroke="#D4537E" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,71.0 520,71.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,101.0 520,101.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,341.0 520,341.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,311.0 520,311.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,161.0 520,161.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,191.0 520,191.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<path d="M150,296.0 C335.0,296.0 335.0,461.0 520,461.0" fill="none" stroke="#D85A30" stroke-width="1" opacity="0.65"/>
+<rect x="20" y="225.0" width="130" height="22" rx="4" fill="#F0997B" fill-opacity="0.35" stroke="#712B13"/><text x="27" y="240.0" fill="#712B13">Lernziel 3</text>
+<rect x="20" y="255.0" width="130" height="22" rx="4" fill="#F0997B" fill-opacity="0.35" stroke="#712B13"/><text x="27" y="270.0" fill="#712B13">Lernziel 4</text>
+<rect x="20" y="285.0" width="130" height="22" rx="4" fill="#FAC775" fill-opacity="0.35" stroke="#633806"/><text x="27" y="300.0" fill="#633806">Frage 5</text>
+<rect x="190" y="150.0" width="270" height="22" rx="4" fill="#AFA9EC" fill-opacity="0.35" stroke="#3C3489"/><text x="197" y="165.0" fill="#3C3489">4.1 Bewertung der Ketonkörpermessung</text>
+<rect x="190" y="180.0" width="270" height="22" rx="4" fill="#EEEDFE" fill-opacity="0.35" stroke="#534AB7"/><text x="197" y="195.0" fill="#534AB7">Pop-up: Bis 0,6 mmol/l Normalbefu…</text>
+<rect x="190" y="210.0" width="270" height="22" rx="4" fill="#EEEDFE" fill-opacity="0.35" stroke="#534AB7"/><text x="197" y="225.0" fill="#534AB7">Pop-up: Negativ Normalbefund (Cav…</text>
+<rect x="190" y="240.0" width="270" height="22" rx="4" fill="#F1EFE8" fill-opacity="0.35" stroke="#5F5E5A"/><text x="197" y="255.0" fill="#5F5E5A">Acetoacetat (Messung im Urin)</text>
+<rect x="190" y="270.0" width="270" height="22" rx="4" fill="#F1EFE8" fill-opacity="0.35" stroke="#5F5E5A"/><text x="197" y="285.0" fill="#5F5E5A">ß-Hydroxybutyrat (Messung im Serum)</text>
+<rect x="190" y="300.0" width="270" height="22" rx="4" fill="#F1EFE8" fill-opacity="0.35" stroke="#5F5E5A"/><text x="197" y="315.0" fill="#5F5E5A">Der geübte Kliniker kann oft den Ve…</text>
+<rect x="190" y="330.0" width="270" height="22" rx="4" fill="#F1EFE8" fill-opacity="0.35" stroke="#5F5E5A"/><text x="197" y="345.0" fill="#5F5E5A">Bis 0,6 mmol/l Normalbefund 0,6 bis…</text>
+<rect x="190" y="360.0" width="270" height="22" rx="4" fill="#F1EFE8" fill-opacity="0.35" stroke="#5F5E5A"/><text x="197" y="375.0" fill="#5F5E5A">Negativ Normalbefund (Cave:bei SGLT…</text>
+<rect x="520" y="60.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="75.0" fill="#72243E">Acetoacetat wird im Urin gemessen.</text>
+<rect x="520" y="90.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="105.0" fill="#72243E">ß-Hydroxybutyrat wird im Serum gemessen.</text>
+<rect x="520" y="120.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="135.0" fill="#72243E">Der Geruch der Ausatemluft kann den Verdach…</text>
+<rect x="520" y="150.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="165.0" fill="#72243E">Das Messergebnis für ß-Hydroxybutyrat im Se…</text>
+<rect x="520" y="180.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="195.0" fill="#72243E">ß-OHB im Serum bis 0,6 mmol/l: Normalbefund.</text>
+<rect x="520" y="210.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="225.0" fill="#72243E">ß-OHB im Serum 0,6 bis 1,5 mmol/l: einfache…</text>
+<rect x="520" y="240.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="255.0" fill="#72243E">ß-OHB im Serum über 1,5 mmol/l: schwere Ent…</text>
+<rect x="520" y="270.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="285.0" fill="#72243E">ß-OHB im Serum über 3 mmol/l: medizinischer…</text>
+<rect x="520" y="300.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="315.0" fill="#72243E">Acetoacetat im Urin wird durch Farbvergleic…</text>
+<rect x="520" y="330.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="345.0" fill="#72243E">Acetoacetat im Urin negativ: Normalbefund.</text>
+<rect x="520" y="360.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="375.0" fill="#72243E">Acetoacetat im Urin negativ bis +: einfache…</text>
+<rect x="520" y="390.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="405.0" fill="#72243E">Acetoacetat im Urin ++: mittlere Entgleisun…</text>
+<rect x="520" y="420.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="435.0" fill="#72243E">Acetoacetat im Urin +++: schwere Entgleisun…</text>
+<rect x="520" y="450.0" width="320" height="22" rx="4" fill="#ED93B1" fill-opacity="0.35" stroke="#72243E"/><text x="527" y="465.0" fill="#72243E">Unter SGLT2-Hemmern ist ein negativer Aceto…</text>
+<rect x="900" y="75.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="90.0" fill="#085041">Acetoacetat</text>
+<rect x="900" y="105.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="120.0" fill="#085041">Urin</text>
+<rect x="900" y="135.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="150.0" fill="#085041">ß-Hydroxybutyrat</text>
+<rect x="900" y="165.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="180.0" fill="#085041">Serum</text>
+<rect x="900" y="195.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="210.0" fill="#085041">Ausatemluft</text>
+<rect x="900" y="225.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="240.0" fill="#085041">Ketose</text>
+<rect x="900" y="255.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="270.0" fill="#085041">Normalbefund</text>
+<rect x="900" y="285.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="300.0" fill="#085041">einfache Entgleisung</text>
+<rect x="900" y="315.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="330.0" fill="#085041">schwere Entgleisung</text>
+<rect x="900" y="345.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="360.0" fill="#085041">medizinischer Notfall</text>
+<rect x="900" y="375.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="390.0" fill="#085041">Krankenhausbehandlung</text>
+<rect x="900" y="405.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="420.0" fill="#085041">mittlere Entgleisung</text>
+<rect x="900" y="435.0" width="190" height="22" rx="4" fill="#9FE1CB" fill-opacity="0.35" stroke="#085041"/><text x="907" y="450.0" fill="#085041">SGLT2-Inhibitor</text>
+<line x1="20" y1="516" x2="42" y2="516" stroke="#B4B2A9" stroke-width="2"/>
+<text x="48" y="520" fill="#444441">structure</text>
+<line x1="118.5" y1="516" x2="140.5" y2="516" stroke="#D85A30" stroke-width="2"/>
+<text x="146.5" y="520" fill="#444441">didactic</text>
+<line x1="210.5" y1="516" x2="232.5" y2="516" stroke="#D4537E" stroke-width="2"/>
+<text x="238.5" y="520" fill="#444441">fact roles (SUBJECT, CONDITION, IMPLIES, …, SUPPORTED_BY)</text>
+</svg>
