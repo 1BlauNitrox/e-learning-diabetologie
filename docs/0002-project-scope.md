@@ -26,7 +26,7 @@ The first three groups use the question generator. Our direct deliverable, the p
 ### Core deliverable
 
 1. **Data analysis and extraction**: extract the text, structure and quiz content of the given modules ([#5](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/5)).
-2. **Knowledge graph model**: entities, relations and provenance, so that every fact links back to its source slide ([#6](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/6)).
+2. **Knowledge graph model**: entities, relations and provenance, so that every fact links back to its source slide ([#24](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/24)).
 3. **Construction pipeline**: a reproducible run from the raw module to the graph. A new module in the same format can be added without changing code. A new source format only needs a new extraction step.
 4. **Agentic AI**: crewAI agents for the pipeline steps where they add value, e.g. entity and relation extraction ([#8](https://github.com/1BlauNitrox/e-learning-diabetologie/issues/8)).
 5. **Documentation** that lets others run, understand and extend the pipeline.
