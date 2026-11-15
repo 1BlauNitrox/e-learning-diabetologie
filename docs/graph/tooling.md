@@ -10,6 +10,7 @@
 | Query language | **Cypher** | Neo4j's language; the ISO standard GQL (ISO/IEC 39075:2024) is based on it, and other databases (ArcadeDB, Apache AGE) accept it too |
 | Visualization | **Neo4j Query tool / Browser** | Built in; shows any query result as a graph |
 | Exchange format | **`graph.json`** from [graph v1](v1.md#prototype) | Independent of the database; the Cypher load script is generated from it, so the database can be rebuilt or replaced at any time |
+| Viewer of the [graph v2](v2.md#prototype) prototype | **vis-network** 9.1.9, loaded from the unpkg CDN | Draws an interactive graph in a single HTML file that opens without a server or a database, so the prototype can be shown to anyone. Licensed under Apache 2.0 or MIT. The file needs a network connection to load the library; no data is sent |
 
 ## Cost, licence, local use
 
