@@ -1,4 +1,4 @@
-"""Draw the prototype graph as SVG images for docs/0007-graph-structure.md.
+"""Draw the prototype graph as SVG images for docs/graph/v1.md.
 
 - overview: every node except passages and answer options, in a force-directed layout
 - slide 4.1: one topic across all layers, in columns (didactic | source | facts | concepts)
@@ -6,7 +6,7 @@
 The layout is seeded, so the same graph.json gives the same images.
 
 Usage:
-    python prototype/graph/draw_graph.py prototype/graph/output/graph.json docs/images
+    python prototype/graph/v1/draw_graph.py prototype/graph/v1/output/graph.json docs/graph/images
 """
 
 import json
@@ -226,8 +226,8 @@ def main(argv):
     graph = json.loads(Path(argv[1]).read_text(encoding="utf-8"))
     out = Path(argv[2])
     out.mkdir(parents=True, exist_ok=True)
-    (out / "0007-prototype-overview.svg").write_text(overview(graph), encoding="utf-8", newline="\n")
-    (out / "0007-prototype-4.1.svg").write_text(slide_detail(graph, "5cxhcjlTRsl"), encoding="utf-8", newline="\n")
+    (out / "v1-overview.svg").write_text(overview(graph), encoding="utf-8", newline="\n")
+    (out / "v1-slide-4.1.svg").write_text(slide_detail(graph, "5cxhcjlTRsl"), encoding="utf-8", newline="\n")
     print(f"images -> {out}")
     return 0
 

@@ -1,13 +1,13 @@
-"""Build the prototype knowledge graph of one module (docs/0007-graph-structure.md).
+"""Build the prototype knowledge graph of one module (docs/graph/v1.md).
 
 The source layer, the questions and the passage-to-concept index are derived from the
 extraction output by rules. Names, learning-objective and test mappings, concepts and
-facts come from the hand-made prototype/graph/manual.json.
+facts come from the hand-made prototype/graph/v1/manual.json.
 
 Writes graph.json: nodes and edges, independent of any graph database.
 
 Usage:
-    python prototype/graph/build_graph.py data/extracted/ketonkoerper.json prototype/graph/output
+    python prototype/graph/v1/build_graph.py data/extracted/ketonkoerper.json prototype/graph/v1/output
 """
 
 import json

@@ -179,7 +179,7 @@ The pop-up layer of scene 11 and the 3 hidden layers are the 4 excluded layers c
 - **The mappings in 3.3–3.6 are a first reference** to check the pipeline against.
 - **Recurring concepts are the main candidates for content nodes** in the knowledge graph, and the hierarchy for structural nodes.
 
-The graph structure built on these findings is described in [0007](0007-graph-structure.md); the canonical document model (#14) and the knowledge graph schema (#6) formalise it.
+The first graph structure built on these findings is described in [graph v1](graph/v1.md). The canonical document model is designed in #14 and the model of graph v2 in #24.
 
 ## 4. Technical format
 

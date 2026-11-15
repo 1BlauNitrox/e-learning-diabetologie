@@ -1,6 +1,6 @@
 """Tests for the graph images.
 
-Run from the repository root: python -m unittest discover -s prototype/graph
+Run from the repository root: python -m unittest discover -s prototype/graph/v1
 """
 
 import json

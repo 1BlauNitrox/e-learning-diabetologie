@@ -1,4 +1,4 @@
-// Example queries on the prototype graph (docs/0008-graph-tooling.md). Run them one at a time.
+// Example queries on the prototype graph (docs/graph/tooling.md). Run them one at a time.
 
 // 1. Index: which topics explain SGLT2 inhibitors?
 MATCH (:Concept {name: 'SGLT2-Inhibitor'})<-[:MENTIONS]-(:Passage)<-[:HAS_PASSAGE]-(s:Section)
