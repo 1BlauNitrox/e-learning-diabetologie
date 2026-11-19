@@ -8,7 +8,7 @@ Goal, scope and target users: [`docs/0002-project-scope.md`](docs/0002-project-s
 
 | Path | Content |
 |---|---|
-| `docs/` | Numbered knowledge base: requirements, decisions and findings. `docs/graph/` holds the graph docs: one file per graph version, plus the tooling |
+| `docs/` | Numbered knowledge base: requirements, decisions and findings. `docs/graph/` holds the graph docs: one file per graph version, plus the tooling and the metric |
 | `prototype/extraction/` | Extraction prototype for one Storyline module and its tests, see [`docs/0003-data-analysis.md`](docs/0003-data-analysis.md#46-extraction-prototype) |
 | `prototype/graph/v1/` | Prototype of graph v1, built from the extraction output: builder, drawing script, hand-made input, tests and generated `output/`, see [`docs/graph/v1.md`](docs/graph/v1.md#prototype) |
 | `prototype/graph/v2/` | Prototype of graph v2: hand-made statements, builder with validator, viewer template, tests and generated `output/` (graph and interactive viewer), see [`docs/graph/v2.md`](docs/graph/v2.md#prototype) |
