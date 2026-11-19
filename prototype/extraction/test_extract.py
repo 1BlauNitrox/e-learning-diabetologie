@@ -1,6 +1,6 @@
 """Tests for the extraction prototype.
 
-Run from the repository root: python -m unittest discover prototype
+Run from the repository root: python -m unittest discover -s prototype/extraction
 The tests on the module are skipped if the raw data is not in data/raw/.
 """
 
@@ -12,7 +12,7 @@ from pathlib import Path
 
 import extract
 
-EXPORT = Path(__file__).resolve().parent.parent / "data" / "raw" / "2026 E-Learning Diabetologie" / "Ketonkörper"
+EXPORT = Path(__file__).resolve().parents[2] / "data" / "raw" / "2026 E-Learning Diabetologie" / "Ketonkörper"
 
 
 class CleanTest(unittest.TestCase):

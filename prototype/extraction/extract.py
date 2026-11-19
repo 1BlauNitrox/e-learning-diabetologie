@@ -4,7 +4,7 @@ Extracts the slide text and the questions of one module in reading order and
 writes them as JSON. See docs/0003-data-analysis.md for the format.
 
 Usage:
-    python prototype/extract.py <export-dir> <output.json>
+    python prototype/extraction/extract.py <export-dir> <output.json>
 """
 
 import json

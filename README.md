@@ -8,8 +8,10 @@ Goal, scope and target users: [`docs/0002-project-scope.md`](docs/0002-project-s
 
 | Path | Content |
 |---|---|
-| `docs/` | Numbered knowledge base: requirements, decisions and findings |
-| `prototype/` | Extraction prototype for one Storyline module and its tests, see [`docs/0003-data-analysis.md`](docs/0003-data-analysis.md#46-extraction-prototype) |
+| `docs/` | Numbered knowledge base: requirements, decisions and findings. `docs/graph/` holds the graph docs: one file per graph version, plus the tooling |
+| `prototype/extraction/` | Extraction prototype for one Storyline module and its tests, see [`docs/0003-data-analysis.md`](docs/0003-data-analysis.md#46-extraction-prototype) |
+| `prototype/graph/v1/` | Prototype of graph v1, built from the extraction output: builder, drawing script, hand-made input, tests and generated `output/`, see [`docs/graph/v1.md`](docs/graph/v1.md#prototype) |
+| `scripts/explore/` | Exploration scripts, e.g. the Neo4j spike, see [`docs/graph/tooling.md`](docs/graph/tooling.md#spike) |
 | `data/` | Local only and git-ignored: raw data in `data/raw/`, extraction output in `data/extracted/` |
 | `.github/` | Issue and pull request templates |
 | `AGENTS.md` | Instructions for AI coding agents (`CLAUDE.md` imports it) |
@@ -30,4 +32,5 @@ Code, comments, issues, PRs and documentation are written in **English**. The so
 
 - Docs describe the current state, not its history. When something changes, rewrite the existing doc instead of appending to it.
 - Create a new numbered file only for a new decision or finding. If an existing doc covers the topic, update that doc instead.
+- Docs on one larger subject share a folder without numbers. `docs/graph/` has one file per graph version; an older version is kept as long as it is a baseline for comparison, and says so at its top.
 - Delete docs that are no longer true.
